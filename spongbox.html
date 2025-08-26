@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spinning SpongeBob</title>
+  <style>
+    .spongebob {
+      width: 150px;
+      height: 150px;
+      background-image: url('./images/spongebob.png');
+      background-size: cover;
+      background-position: center;
+      margin: 100px auto;
+      --animation-duration: 2s;
+      border-radius: 8px;
+      border-radius: 12px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="spongebob"></div>
+
+<script>
+  // This script adds click-to-toggle functionality for the spinning animation.
+  // Clicking on the SpongeBob element will start or stop the spinning effect.
+  const spongebob = document.querySelector('.spongebob');
+  let isSpinning = true;
+
+  spongebob.addEventListener('click', () => {
+    isSpinning = !isSpinning;
+    spongebob.style.animationPlayState = isSpinning ? 'running' : 'paused';
+  });
+
+  spongebob.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      isSpinning = !isSpinning;
+      spongebob.style.animationPlayState = isSpinning ? 'running' : 'paused';
+    }
+  });
+
+  // Ensure the element is focusable for keyboard navigation
+  spongebob.setAttribute('tabindex', '0');
+    // Set the animation play state based on the spinning state
+    // If isSpinning is true, the animation will run; otherwise, it will pause
+    spongebob.style.animationPlayState = isSpinning ? 'running' : 'paused';
+</script>
+</body>
+</html>
