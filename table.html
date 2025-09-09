@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Patient Table</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #e3eefc 0%, #f4f8fb 100%);
+      margin: 0;
+      padding: 40px 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(44, 62, 80, 0.10);
+      padding: 32px 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 20px;
+      width: 100%;
+      background: #f9fbfd;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    }
+    th, td {
+      border: 1px solid #b0c4de;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 1.08em;
+      transition: background 0.2s;
+    }
+    th {
+      background-color: #e3eefc;
+      color: #2c3e50;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #b0c4de;
+    }
+    tr:nth-child(even) td {
+      background-color: #f7fbff;
+    }
+    tr:hover td {
+      background-color: #d6eaff;
+    }
+    td:first-child {
+      font-weight: 500;
+      color: #2980b9;
+    }
+    .doctor-badge {
+      display: inline-block;
+      background: #eaf6ff;
+      color: #217dbb;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.97em;
+      font-weight: 500;
+      box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+    }
+    @media (max-width: 700px) {
+      .container {
+        padding: 12px 4px;
+      }
+      table, th, td {
+        font-size: 0.95em;
+        padding: 8px 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hospital Patient List</h1>
+    <table>
+      <tr>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Room Number</th>
+        <th>Doctor</th>
+      </tr>
+      <tr>
+        <td>John Smith</td>
+        <td>45</td>
+        <td>101</td>
+        <td><span class="doctor-badge">Dr. Marc</span></td>
+      </tr>
+      <tr>
+        <td>Maria Garcia</td>
+        <td>32</td>
+        <td>102</td>
+        <td><span class="doctor-badge">Dr. Mai</span></td>
+      </tr>
+      <tr>
+        <td>Ahmed Khan</td>
+        <td>60</td>
+        <td>103</td>
+        <td><span class="doctor-badge">Dr. Chen</span></td>
+      </tr>
+    </table>
+  </div>
+</body>
